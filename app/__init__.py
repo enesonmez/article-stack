@@ -16,6 +16,8 @@ def create_app(config_name):
     db.init_app(app)
     migrate = Migrate(app,db) # db ve model'leri eşitler. flask db init  -  flask db migrate - flask db upgrade
 
+    from app import models
+
     from .controller.home import home
     app.register_blueprint(home)
 

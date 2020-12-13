@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Article Stack</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/swiper.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/ionicons.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/usercard.css') }}" rel="stylesheet">
+
+	
+
+	<style>
+		
+		
+		@media (min-width: 866px) {
+			.fixedHeading {
+				opacity: 0.9;
+			}
+
+			.heading {
+				position: fixed;
+				z-index: 9999;
+				width: 100%;
+			}
+
+			.topSection {
+				margin-top: 50px;
+			}
+		}	
+	</style>
+
+</head>
+<body >
+    <header class="heading">
+		<div class="container-fluid position-relative no-side-padding">
+
+			<a href="/" class="logo" style="font-size:20px; font-family: 'Roboto', sans-serif;"><b>article stack</b></a>
+
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+
+			<ul class="main-menu visible-on-click" id="main-menu">
+				<li><a href="#">Keşfet</a></li>
+				<li><a href="#">İletişim</a></li>
+				<li><a href="#">Biz Kimiz?</a></li>
+			</ul><!-- main-menu -->
+
+            <ul class="main-menu visible-on-click" id="main-menu" style="position: relative; float: right; display: inline-block;">
+				<li><a href="#"><i class="ion-android-person"></i> Giriş Yap</a></li>
+            </ul>
+
+			<div class="src-area">
+				<form>
+					<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+					<input class="src-input" type="text" placeholder="Size değer katacak yazı mı arıyorsunuz?">
+				</form>
+			</div>
+		</div><!-- conatiner -->
+	</header>
+
+    <div class="container" style="min-height:380px">
+        {% include "includes/messages.html" %}
+        {% block body %}
+   
+        {% endblock %}
+    </div>
+
+
+
+    {% include "footer.html" %}
+</body>
+</html>

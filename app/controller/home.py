@@ -7,4 +7,4 @@ home = Blueprint('home',__name__)
 
 @home.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return render_template('index.html')

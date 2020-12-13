@@ -2,6 +2,9 @@ class Config(object):
     """
     Common configurations
     """
+    FLASK_ENV = "development"
+    FLASK_APP = "run"
+    FLASK_CONFIG = "development"
 
 
 class DevelopmentConfig(Config):

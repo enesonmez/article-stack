@@ -59,6 +59,7 @@
 <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
 <script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
 <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/generally.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $(window).scroll(function () {
@@ -68,5 +69,18 @@
                 $('.heading').addClass('fixedHeading');
             }
         });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var x = document.getElementById("login");
+        var y = document.getElementById("loginresponsive");
+        if (window.innerWidth < 865){
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            x.style.display = "inline-block";
+            y.style.display = "none";
+        }
     });
 </script>

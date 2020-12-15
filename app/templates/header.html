@@ -9,6 +9,8 @@
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+
 
 
 	<!-- Stylesheets -->
@@ -17,13 +19,11 @@
 	<link href="{{ url_for('static', filename='css/ionicons.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='css/usercard.css') }}" rel="stylesheet">
-
+	<link href="{{ url_for('static', filename='css/generally.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/logoLast.png') }}"/>
 	
 
 	<style>
-		
-		
 		@media (min-width: 866px) {
 			.fixedHeading {
 				opacity: 0.9;
@@ -38,6 +38,7 @@
 			.topSection {
 				margin-top: 50px;
 			}
+
 		}	
 	</style>
 
@@ -54,10 +55,13 @@
 				<li><a href="#">Keşfet</a></li>
 				<li><a href="#">İletişim</a></li>
 				<li><a href="#">Biz Kimiz?</a></li>
+				<!-- sayfa genişliği 864'ten küçük olduğunda -->
+				<li id="loginresponsive"><a href="author/login"><i class="ion-android-person"></i> Giriş Yap</a></li>
 			</ul><!-- main-menu -->
 
-            <ul class="main-menu visible-on-click" id="main-menu" style="position: relative; float: right; display: inline-block;">
-				<li><a href="#"><i class="ion-android-person"></i> Giriş Yap</a></li>
+			<!-- sayfa genişliği 864'ten büyük olduğunda -->
+            <ul class="main-menu visible-on-click" id="login" style="position: relative; float: right; display: inline-block;">
+				<li><a href="author/login"><i class="ion-android-person"></i> Giriş Yap</a></li>
             </ul>
 
 			<div class="src-area">
@@ -65,7 +69,9 @@
 					<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
 					<input class="src-input" type="text" placeholder="Size değer katacak yazı mı arıyorsunuz?">
 				</form>
+				
 			</div>
+			
 		</div><!-- conatiner -->
 	</header>
 
